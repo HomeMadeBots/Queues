@@ -5,4 +5,4 @@ a set of data as a queue, i.e. manage data with a first-in first-out (FIFO)
 container.
 
 * [Requirements](/doc/Queues_Requirements.md)
-* [Architecture](/doc/Physical_Architecture.md)
+* [Architecture](/doc/Queues_Architecture.md)
