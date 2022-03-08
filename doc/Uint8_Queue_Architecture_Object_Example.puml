@@ -1,0 +1,25 @@
+@startuml
+
+!includeurl https://gist.githubusercontent.com/Arnaud-Bonneuil/c317a7a30bed7d64e2b5b1f558ac00cf/raw/sober.puml
+
+class Dummy_Array_Type <<Array_Type>>
+{
+  Multiplicity = 13
+  Base_Type_Ref = uint8
+}
+
+object "Dummy_Queue : Uint8_Queue" as Dummy_Queue {
+  Size = 13
+}
+
+object " Dummy_Array : Dummy_Array_Type " as Dummy_Array
+
+Dummy_Queue --> Dummy_Array : Container
+
+note as Note1
+  The //Size// of the object **Dummy_Queue**
+  shall be equal to the //Multiplicity// of
+  the type **Dummy_Array_Type**.
+end note
+
+@enduml

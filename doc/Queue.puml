@@ -1,0 +1,28 @@
+@startuml
+
+abstract class Queue
+{
+  Allows to manage a set of data with a FIFO container.
+  
+  --
+  + Size:uint16
+  --
+  - {abstract} Add_To_Container( in new_item )
+  - {abstract} Remove_From_Container( out item )
+  + Enqueue( in new_item, out is_enqueued:boolean )
+  + Dequeue( out item, out is_dequeued:boolean )
+  + Get_Size( out size:uint16 )
+  + Get_Number_Of_Items( out number_of_items:uint16 )
+  + Is_Empty( out result:boolean )
+  + Is_Full( out result:boolean )
+}
+
+class an_array
+{
+  The size of this array depends on //Queue.Size//.
+  Its base type depends on the type of data to queue.
+}
+
+Queue -> an_array :  1\r-Container
+
+@enduml

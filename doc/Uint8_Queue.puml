@@ -1,0 +1,11 @@
+@startuml
+
+class Uint8_Queue
+{
+  Allows to manage a set of uint8 with a FIFO container.
+  --
+  - Add_To_Container( in new_item:uint8 )
+  - Remove_From_Container( out item:uint8 )
+}
+
+@enduml
