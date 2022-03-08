@@ -1,0 +1,32 @@
+@startuml
+
+!includeurl https://gist.githubusercontent.com/Arnaud-Bonneuil/c317a7a30bed7d64e2b5b1f558ac00cf/raw/sober.puml
+
+left to right direction
+
+actor "Developer" as Dev
+actor "Class" as Actor_Class
+
+actor "Component_Type" as SWCT
+actor "Internal_Design_Class" as IDC
+
+SWCT --|> Actor_Class
+IDC --|> Actor_Class
+
+rectangle Software_Element {
+  usecase "Set queue size" as UC1
+  usecase "Set type of queued data" as UC2
+  usecase "Enqueue item" as UC3
+  usecase "Dequeue item" as UC4
+  usecase "Get queue size" as UC5
+  usecase "Get number of items" as UC6
+}
+
+Dev --> UC1
+Dev --> UC2
+Actor_Class --> UC3
+Actor_Class --> UC4
+Actor_Class --> UC5
+Actor_Class --> UC6
+
+@enduml
