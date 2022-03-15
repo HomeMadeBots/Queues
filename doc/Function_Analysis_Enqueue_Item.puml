@@ -1,0 +1,15 @@
+@startuml
+
+!includeurl https://gist.githubusercontent.com/Arnaud-Bonneuil/c317a7a30bed7d64e2b5b1f558ac00cf/raw/sober.puml
+
+start
+:Check queue availability;
+if () then (queue is not full)
+  :Add item to the tail of the queue;
+  :Return success status;
+else (queue is full)
+  :Return error status;
+endif
+stop
+
+@enduml

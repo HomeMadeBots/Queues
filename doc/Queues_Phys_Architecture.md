@@ -1,4 +1,4 @@
-# Queues architecture
+# Queues physical architecture
 
 The physical architecture is designed following
 [this meta-model](https://github.com/HomeMadeBots/Embedded_Software_Meta_Model).

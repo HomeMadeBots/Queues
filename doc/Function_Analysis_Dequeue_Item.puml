@@ -1,0 +1,17 @@
+@startuml
+
+!includeurl https://gist.githubusercontent.com/Arnaud-Bonneuil/c317a7a30bed7d64e2b5b1f558ac00cf/raw/sober.puml
+
+start
+:Check queue content;
+if () then (queue is not empty)
+  :Remove item from the
+  head of the queue;
+  :Return removed item;
+  :Return success status;
+else (queue is empty)
+  :Return error status;
+endif
+stop
+
+@enduml
